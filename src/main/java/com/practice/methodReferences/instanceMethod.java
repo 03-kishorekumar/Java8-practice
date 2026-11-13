@@ -19,7 +19,10 @@ import java.util.List;
 //
 //        List<String> list = Arrays.asList("abi", "bala", "chai");
 //
-//        list.forEach(obj::display);
+//        list.forEach(obj::display);   // Method Reference
+
+//        list.forEach(name -> obj.display(name));  // Lambda Expression
+
 //    }
 //}
 
@@ -49,7 +52,11 @@ public class instanceMethod
     public static void main(String[] args)
     {
         instance obj = new instance();
-        sample s = obj::print;
+
+        sample s = obj::print;  // Method Reference
+
+        sample s1 = name -> obj.print(name);    // Lambda Expression
+
         System.out.println(s.print("Kishore"));
     }
 

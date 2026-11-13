@@ -18,7 +18,9 @@ public class staticMethod
 {
     public static void main(String[] args)
     {
-        square obj = calculate::calculate;
+        square obj = calculate::calculate;      // Method Reference
+
+        square obj2 = (num) -> calculate.calculate(num); // Lambda Expression
 
         System.out.println(obj.calculate(5));
 

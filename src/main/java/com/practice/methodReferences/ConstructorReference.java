@@ -13,6 +13,12 @@ public class ConstructorReference
 
     public static void main(String[] args)
     {
+        // Lambda Expression
+        Supplier<ConstructorReference> obj1 = () -> new ConstructorReference();
+
+        System.out.println(obj1.get());
+
+        // Method Reference
         Supplier<ConstructorReference> obj = ConstructorReference::new;
 
         System.out.println(obj.get());
